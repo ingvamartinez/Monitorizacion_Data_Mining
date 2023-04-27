@@ -1,0 +1,41 @@
+---
+title: "Monitoring_Server_Log"
+author: "Adrian Martinez"
+date: "2023-04-25"
+output: html_document
+editor_options: 
+  markdown: 
+    wrap: 72
+---
+
+# Actividad: Monitoreo de log de servidor
+
+## Actividad 1
+
+#### Análisis de logs de servidor usando R
+
+##### Pregunta 1:
+
+Queremos programar un script con el que podamos hacer una investigación
+forense sobre un fichero de logs de un servidor de tipo Apache. Los
+datos del registro del servidor están en el formato estándar e incluyen
+miles de registros sobre las distintas peticiones gestionadas por el
+servidor web. Nuestro programa ha de ser capaz de obtener las respuestas
+de forma dinámica a las siguientes preguntas utilizando instrucciones de
+código en R: 1. Descomprimir el fichero comprimido que contiene los
+registros del servidor, y a partir de los datos extraídos, cargar en
+data frames los registros con las peticiones servidas. El primer paso
+para realizar tareas de análisis consiste en la carga de los datos, la
+exploración inicial y limpieza de los datos (filtrado, corrección de
+tipo de datos, ajuste de la forma de los datos, etc.). Para esto
+usaremos la capacidad de R y de sus librerías (tidyr y dplyr) para
+modificar los data frames cargados y adaptarlos a la estructura de datos
+elegantes: cada fila se corresponderá a una observación y cada columna
+únicamente una variable. De esta forma, se facilita el análisis y la
+posterior modificación de la forma del data frame, adaptando este para
+que pueda ser usado en la mayoría de funciones de R.
+
+
+'''{r}
+
+'''
