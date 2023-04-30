@@ -49,4 +49,37 @@ datafull2<-cbind.data.frame(datafull,tipo_imagen)
 table_df2<- datafull2 %>% select(RequestType,tipo_imagen)
 table_df2<- as.data.frame(subset(table_df2,tipo_imagen == TRUE))
 frec_prot_img<- data.frame(table(table_df2$RequestType))
-                     
+
+#Pregunta 4
+
+# Graficos
+
+library(ggplot2)
+df4 <- as.data.frame(datafull)
+
+#1
+gf_Hist<-ggplot(df4, aes(Status, fill = Status))  + geom_histogram(bin=15)+
+  labs(title="Grafico Histograma")
+gf_Hist
+#2
+gf_Bar<-ggplot(df4, aes(Status, fill = Status)) + geom_bar(stat = "count")+
+  labs(title="Gráfico de Barras")
+gf_bar
+#3
+sumVec<-as.character(df4$Status)
+table_status<-table(sumVec)
+df5<-data.frame(table_status)
+df5<-rename(df5,c(Status=sumVec, Url=Freq))
+etiquetas <- paste0(df5$Status,"=",round(100 * df5$Url/sum(df5$Url), 2), "%")
+
+gf_Pie<- ggplot(df5,aes(x=" ",y=Url, fill= Status))+
+  geom_bar(stat = "identity",color="white" )+
+  geom_text(aes(label=etiquetas),
+            position=position_stack(vjust=0.5),color="white",size=2)+
+  coord_polar(theta="y")+
+  theme_void()+
+  labs(title="Gráfico de Pie")
+gf_Pie
+library(patchwork)
+
+gf_Hist + gf_Bar + gf_Pie
