@@ -1,0 +1,403 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+]{article}
+\usepackage{amsmath,amssymb}
+\usepackage{lmodern}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\usepackage[margin=1in]{geometry}
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\usepackage{framed}
+\definecolor{shadecolor}{RGB}{248,248,248}
+\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.94,0.16,0.16}{#1}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.77,0.63,0.00}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\BuiltInTok}[1]{#1}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.64,0.00,0.00}{\textbf{#1}}}
+\newcommand{\ExtensionTok}[1]{#1}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ImportTok}[1]{#1}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\NormalTok}[1]{#1}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\RegionMarkerTok}[1]{#1}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same} % disable monospaced font for URLs
+\hypersetup{
+  pdftitle={Monitoring\_Server\_Log},
+  pdfauthor={Victor Adrian Martinez},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\title{Monitoring\_Server\_Log}
+\author{Victor Adrian Martinez}
+\date{2023-04-25}
+
+\begin{document}
+\maketitle
+
+\begin{description}
+\item[\href{https://github.com/ingvamartinez/Monitorizacion_Data_Mining}{link
+Github}]
+\url{https://github.com/ingvamartinez/Monitorizacion_Data_Mining}
+\end{description}
+
+\#Actividad: Monitoreo de log de servidor
+
+\hypertarget{actividad-1}{%
+\subsection{Actividad 1}\label{actividad-1}}
+
+\hypertarget{anuxe1lisis-de-logs-de-servidor-usando-r}{%
+\paragraph{Análisis de logs de servidor usando
+R}\label{anuxe1lisis-de-logs-de-servidor-usando-r}}
+
+\hypertarget{pregunta-1}{%
+\paragraph{Pregunta 1:}\label{pregunta-1}}
+
+Queremos programar un script con el que podamos hacer una investigación
+forense sobre un fichero de logs de un servidor de tipo Apache. Los
+datos del registro del servidor están en el formato estándar e incluyen
+miles de registros sobre las distintas peticiones gestionadas por el
+servidor web.
+
+Nuestro programa ha de ser capaz de obtener las respuestas de forma
+dinámica a las siguientes preguntas utilizando instrucciones de código
+en R: 1. Descomprimir el fichero comprimido que contiene los registros
+del servidor, y a partir de los datos extraídos, cargar en data frames
+los registros con las peticiones servidas.
+
+El primer paso para realizartareas de análisis consiste en la carga de
+los datos, la exploración inicial y limpieza de los datos (filtrado,
+corrección de tipo de datos, ajuste de la forma de los datos, etc.).
+Para esto usaremos la capacidad de R y de sus librerías (tidyr y dplyr)
+para modificar los data frames cargados y adaptarlos a la estructura de
+datos elegantes: cada fila se corresponderá a una observación y cada
+columna únicamente una variable.
+
+De esta forma, se facilita el análisis y la posterior modificación de la
+forma del data frame, adaptando este para que pueda ser usado en la
+mayoría de funciones de R.
+
+\texttt{code}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{\{}
+\FunctionTok{library}\NormalTok{(dplyr)}
+\FunctionTok{library}\NormalTok{(tidyr) }
+\FunctionTok{library}\NormalTok{(stringr)}
+
+\CommentTok{\# Obtenemos la Data}
+
+\NormalTok{data\_path}\OtherTok{\textless{}{-}}\StringTok{"epa{-}http.csv"}
+
+\NormalTok{data}\OtherTok{\textless{}{-}}\FunctionTok{read.csv}\NormalTok{(data\_path, }\AttributeTok{col.names =} \FunctionTok{c}\NormalTok{(}\StringTok{\textquotesingle{}Request.IP\textquotesingle{}}\NormalTok{,}\StringTok{\textquotesingle{}Request\_DATE\textquotesingle{}}\NormalTok{,}
+\StringTok{\textquotesingle{}Request\_Solicitud\textquotesingle{}}\NormalTok{, }\StringTok{\textquotesingle{}Status\textquotesingle{}}\NormalTok{, }\StringTok{\textquotesingle{}Size\textquotesingle{}}\NormalTok{) , }\AttributeTok{sep=}\StringTok{" "}\NormalTok{, }\AttributeTok{header =} \ConstantTok{FALSE}\NormalTok{)}
+
+\CommentTok{\# Relizamos la siguientes operaciones para obtener un DF con todos los datos}
+
+\NormalTok{data\_sol}\OtherTok{\textless{}{-}}\FunctionTok{as.data.frame}\NormalTok{(data}\SpecialCharTok{$}\NormalTok{V3) }
+\NormalTok{data\_sol }\OtherTok{\textless{}{-}} \FunctionTok{str\_split\_fixed}\NormalTok{(data}\SpecialCharTok{$}\NormalTok{Request\_Solicitud,}\StringTok{" "}\NormalTok{,}\DecValTok{3}\NormalTok{) }
+\NormalTok{data\_sol }\OtherTok{\textless{}{-}} \FunctionTok{as.data.frame}\NormalTok{(data\_sol) }
+\NormalTok{data\_sol }\OtherTok{\textless{}{-}} \FunctionTok{rename}\NormalTok{(data\_sol,}\FunctionTok{c}\NormalTok{(}\AttributeTok{RequestType =}\NormalTok{ V1, }\AttributeTok{RequestUrl =}\NormalTok{ V2, }\AttributeTok{RequestProtocol =}
+\NormalTok{V3)) }
+\NormalTok{datafull }\OtherTok{\textless{}{-}} \FunctionTok{cbind.data.frame}\NormalTok{(data,data\_sol)}
+
+\FunctionTok{head}\NormalTok{(datafull,}\DecValTok{2}\NormalTok{) \}}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 
+## Attaching package: 'dplyr'
+\end{verbatim}
+
+\begin{verbatim}
+## The following objects are masked from 'package:stats':
+## 
+##     filter, lag
+\end{verbatim}
+
+\begin{verbatim}
+## The following objects are masked from 'package:base':
+## 
+##     intersect, setdiff, setequal, union
+\end{verbatim}
+
+\begin{verbatim}
+##                Request.IP  Request_DATE           Request_Solicitud Status Size
+## 1           141.243.1.172 [29:23:53:25] GET /Software.html HTTP/1.0    200 1497
+## 2 query2.lycos.cs.cmu.edu [29:23:53:36] GET /Consumer.html HTTP/1.0    200 1325
+##   RequestType     RequestUrl RequestProtocol
+## 1         GET /Software.html        HTTP/1.0
+## 2         GET /Consumer.html        HTTP/1.0
+\end{verbatim}
+
+\hypertarget{pregunta-2}{%
+\paragraph{Pregunta 2:}\label{pregunta-2}}
+
+Explorar el contenido del fichero descomprimido y cargado en un data
+frame. Identificar el número único de usuarios que han interactuado
+directamente con el servidor de forma segregada según si los usuarios
+han tenido algún tipo de error en las distintas peticiones ofrecidas por
+el servidor.Idealmente, hacer el break down del número de usuarios en
+función de si estos han tenido algún tipo de error durante las
+interacciones con el servidor, es decir, ofrecer el número de usuarios
+que no han tenido ningún error en una de las peticiones gestionadas por
+el servidor y el caso contrario, el número de usuarios que sí han
+experimentado algún error para una petición servida.
+
+Para determinar si una respuesta ha sido servida de forma satisfactoria
+o no se puede usar el codigo de retorno de la petición. Los códigos de
+retorno pertenecientes a familia de los 200, se pueden considerar
+peticiones servidas correctamente.
+
+\texttt{code}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{print}\NormalTok{(}\StringTok{\textquotesingle{}Numero de Ips sin errores\textquotesingle{}}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] "Numero de Ips sin errores"
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\#Seleccionamos las variables que necesitamos}
+\NormalTok{ip\_errors}\OtherTok{\textless{}{-}} \FunctionTok{subset}\NormalTok{(datafull, }\AttributeTok{select=}\FunctionTok{c}\NormalTok{(Request.IP,Status))}
+\NormalTok{ip\_errors}\OtherTok{\textless{}{-}} \FunctionTok{as.data.frame}\NormalTok{(ip\_errors)}
+\CommentTok{\#Agregamos una columna para clasificar si tiene error}
+\NormalTok{ip\_errors}\SpecialCharTok{$}\NormalTok{error }\OtherTok{\textless{}{-}} \FunctionTok{ifelse}\NormalTok{(ip\_errors}\SpecialCharTok{$}\NormalTok{Status }\SpecialCharTok{!=} \DecValTok{200}\NormalTok{,}\DecValTok{1}\NormalTok{,}\DecValTok{0}\NormalTok{)}
+\NormalTok{ip\_errors}\OtherTok{\textless{}{-}}\FunctionTok{as.data.frame}\NormalTok{(}\FunctionTok{subset}\NormalTok{(ip\_errors,error }\SpecialCharTok{==} \DecValTok{1}\NormalTok{))}
+\NormalTok{g\_errors}\OtherTok{\textless{}{-}}\NormalTok{ ip\_errors }\SpecialCharTok{\%\textgreater{}\%}  \FunctionTok{group\_by}\NormalTok{(Request.IP) }\SpecialCharTok{\%\textgreater{}\%} 
+   \FunctionTok{summarise}\NormalTok{(}\AttributeTok{sum =} \FunctionTok{sum}\NormalTok{(error))}
+\CommentTok{\#Realizamos la suma aritmetica para obtener la cantidad de los usuarios con errores y sin errores}
+\NormalTok{IP\_error}\OtherTok{\textless{}{-}} \FunctionTok{length}\NormalTok{(}\FunctionTok{unique}\NormalTok{(g\_errors}\SpecialCharTok{$}\NormalTok{Request.IP))}
+\NormalTok{IP\_total}\OtherTok{\textless{}{-}} \FunctionTok{length}\NormalTok{(}\FunctionTok{unique}\NormalTok{(datafull}\SpecialCharTok{$}\NormalTok{Request.IP))}
+\NormalTok{IP\_noerror }\OtherTok{\textless{}{-}}\NormalTok{ IP\_total}\SpecialCharTok{{-}}\NormalTok{IP\_error}
+\FunctionTok{print}\NormalTok{(}\FunctionTok{paste}\NormalTok{(}\StringTok{\textquotesingle{}Usuarios Totales=\textquotesingle{}}\NormalTok{,IP\_total))}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] "Usuarios Totales= 2333"
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{print}\NormalTok{(}\FunctionTok{paste}\NormalTok{(}\StringTok{\textquotesingle{}Usuarios sin errores=\textquotesingle{}}\NormalTok{, IP\_noerror))}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] "Usuarios sin errores= 1089"
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{print}\NormalTok{(}\FunctionTok{paste}\NormalTok{(}\StringTok{\textquotesingle{}Usuarios con errores=\textquotesingle{}}\NormalTok{, IP\_error))}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] "Usuarios con errores= 1244"
+\end{verbatim}
+
+\hypertarget{pregunta-3}{%
+\paragraph{Pregunta 3:}\label{pregunta-3}}
+
+Analizar los distintos tipos de peticiones HTTP (GET, POST, PUT, DELETE)
+gestionadas por el servidor, identificando la frecuencia de cada una de
+estas. Repetir el análisis, esta vez filtrando previamente aquellas
+peticiones correspondientes a recursos ofrecidos de tipo imagen.
+
+\texttt{code}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\#Pregunta 3}
+
+\CommentTok{\#Analizar los distintos tipos de peticiones HTTP (GET, POST, PUT, DELETE) }
+\CommentTok{\#gestionadas por el servidor, identificando la frecuencia de cada una de estas.}
+
+\NormalTok{frec\_Prot\_http}\OtherTok{\textless{}{-}} \FunctionTok{data.frame}\NormalTok{(}\FunctionTok{table}\NormalTok{(datafull}\SpecialCharTok{$}\NormalTok{RequestType))}
+\FunctionTok{head}\NormalTok{(frec\_Prot\_http)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##   Var1  Freq
+## 1  GET 46020
+## 2 HEAD   106
+## 3 POST  1622
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\#Repetir el análisis, esta vez filtrando previamente aquellas peticiones }
+\CommentTok{\#correspondientes a recursos ofrecidos de tipo imagen.}
+\NormalTok{tipo\_imagen}\OtherTok{\textless{}{-}} \FunctionTok{grepl}\NormalTok{(}\AttributeTok{pattern =} \StringTok{".*[png|jpg|gif|ico]$"}\NormalTok{, datafull}\SpecialCharTok{$}\NormalTok{RequestUrl)}
+\NormalTok{tipo\_imagen}\OtherTok{\textless{}{-}} \FunctionTok{as.data.frame}\NormalTok{(tipo\_imagen)}
+\NormalTok{datafull2}\OtherTok{\textless{}{-}}\FunctionTok{cbind.data.frame}\NormalTok{(datafull,tipo\_imagen)}
+\NormalTok{table\_df2}\OtherTok{\textless{}{-}}\NormalTok{ datafull2 }\SpecialCharTok{\%\textgreater{}\%} \FunctionTok{select}\NormalTok{(RequestType,tipo\_imagen)}
+\NormalTok{table\_df2}\OtherTok{\textless{}{-}} \FunctionTok{as.data.frame}\NormalTok{(}\FunctionTok{subset}\NormalTok{(table\_df2,tipo\_imagen }\SpecialCharTok{==} \ConstantTok{TRUE}\NormalTok{))}
+\NormalTok{frec\_prot\_img}\OtherTok{\textless{}{-}} \FunctionTok{data.frame}\NormalTok{(}\FunctionTok{table}\NormalTok{(table\_df2}\SpecialCharTok{$}\NormalTok{RequestType))}
+\FunctionTok{head}\NormalTok{(frec\_prot\_img)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##   Var1  Freq
+## 1  GET 22676
+## 2 HEAD    57
+## 3 POST   232
+\end{verbatim}
+
+\hypertarget{pregunta-4}{%
+\paragraph{Pregunta 4:}\label{pregunta-4}}
+
+Generar un gráfico que permita visualizar las respuestas del servidor,
+es decir, la distribución de peticiones según el código de respuesta de
+esta.
+
+\texttt{code}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# Graficos}
+
+\FunctionTok{library}\NormalTok{(ggplot2)}
+\NormalTok{df4 }\OtherTok{\textless{}{-}} \FunctionTok{as.data.frame}\NormalTok{(datafull)}
+\NormalTok{df4}\SpecialCharTok{$}\NormalTok{Status }\OtherTok{\textless{}{-}} \FunctionTok{as.factor}\NormalTok{(df4}\SpecialCharTok{$}\NormalTok{Status)}
+\CommentTok{\#1}
+\NormalTok{gf\_Hist}\OtherTok{\textless{}{-}}\FunctionTok{ggplot}\NormalTok{(df4, }\FunctionTok{aes}\NormalTok{(Status, }\AttributeTok{fill =}\NormalTok{ Status))  }\SpecialCharTok{+} \FunctionTok{geom\_histogram}\NormalTok{(}\AttributeTok{bin=}\DecValTok{10}\NormalTok{,}\AttributeTok{stat =} \StringTok{"count"}\NormalTok{)}\SpecialCharTok{+}
+  \FunctionTok{labs}\NormalTok{(}\AttributeTok{title=}\StringTok{"Grafico Histograma"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Warning in geom_histogram(bin = 10, stat = "count"): Ignoring unknown
+## parameters: `binwidth`, `bins`, `pad`, and `bin`
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{gf\_Hist}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{Monitorizacion_Sever_Log_files/figure-latex/unnamed-chunk-5-1.pdf}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\#2}
+\NormalTok{gf\_Bar}\OtherTok{\textless{}{-}}\FunctionTok{ggplot}\NormalTok{(df4, }\FunctionTok{aes}\NormalTok{(Status, }\AttributeTok{fill =}\NormalTok{ Status)) }\SpecialCharTok{+} \FunctionTok{geom\_bar}\NormalTok{(}\AttributeTok{stat =} \StringTok{"count"}\NormalTok{)}\SpecialCharTok{+}
+  \FunctionTok{labs}\NormalTok{(}\AttributeTok{title=}\StringTok{"Gráfico de Barras"}\NormalTok{)}
+\NormalTok{gf\_Bar}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{Monitorizacion_Sever_Log_files/figure-latex/unnamed-chunk-6-1.pdf}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\#3}
+\NormalTok{sumVec}\OtherTok{\textless{}{-}}\FunctionTok{as.character}\NormalTok{(df4}\SpecialCharTok{$}\NormalTok{Status)}
+\NormalTok{table\_status}\OtherTok{\textless{}{-}}\FunctionTok{table}\NormalTok{(sumVec)}
+\NormalTok{df5}\OtherTok{\textless{}{-}}\FunctionTok{data.frame}\NormalTok{(table\_status)}
+\NormalTok{df5}\OtherTok{\textless{}{-}}\FunctionTok{rename}\NormalTok{(df5,}\FunctionTok{c}\NormalTok{(}\AttributeTok{Status=}\NormalTok{sumVec, }\AttributeTok{Url=}\NormalTok{Freq))}
+\NormalTok{etiquetas }\OtherTok{\textless{}{-}} \FunctionTok{paste0}\NormalTok{(df5}\SpecialCharTok{$}\NormalTok{Status,}\StringTok{"="}\NormalTok{,}\FunctionTok{round}\NormalTok{(}\DecValTok{100} \SpecialCharTok{*}\NormalTok{ df5}\SpecialCharTok{$}\NormalTok{Url}\SpecialCharTok{/}\FunctionTok{sum}\NormalTok{(df5}\SpecialCharTok{$}\NormalTok{Url), }\DecValTok{2}\NormalTok{), }\StringTok{"\%"}\NormalTok{)}
+
+\NormalTok{gf\_Pie}\OtherTok{\textless{}{-}} \FunctionTok{ggplot}\NormalTok{(df5,}\FunctionTok{aes}\NormalTok{(}\AttributeTok{x=}\StringTok{" "}\NormalTok{,}\AttributeTok{y=}\NormalTok{Url, }\AttributeTok{fill=}\NormalTok{ Status))}\SpecialCharTok{+}
+  \FunctionTok{geom\_bar}\NormalTok{(}\AttributeTok{stat =} \StringTok{"identity"}\NormalTok{,}\AttributeTok{color=}\StringTok{"white"}\NormalTok{ )}\SpecialCharTok{+}
+  \FunctionTok{geom\_text}\NormalTok{(}\FunctionTok{aes}\NormalTok{(}\AttributeTok{label=}\NormalTok{etiquetas),}
+            \AttributeTok{position=}\FunctionTok{position\_stack}\NormalTok{(}\AttributeTok{vjust=}\FloatTok{0.5}\NormalTok{),}\AttributeTok{color=}\StringTok{"white"}\NormalTok{,}\AttributeTok{size=}\DecValTok{2}\NormalTok{)}\SpecialCharTok{+}
+  \FunctionTok{coord\_polar}\NormalTok{(}\AttributeTok{theta=}\StringTok{"y"}\NormalTok{)}\SpecialCharTok{+}
+  \FunctionTok{theme\_void}\NormalTok{()}\SpecialCharTok{+}
+  \FunctionTok{labs}\NormalTok{(}\AttributeTok{title=}\StringTok{"Gráfico de Pie"}\NormalTok{)}
+\NormalTok{gf\_Pie}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{Monitorizacion_Sever_Log_files/figure-latex/unnamed-chunk-7-1.pdf}
+
+```
+
+\end{document}

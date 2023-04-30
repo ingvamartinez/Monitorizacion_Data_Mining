@@ -1,14 +1,20 @@
 ---
 title: "Monitoring_Server_Log"
-author: "Adrian Martinez"
+author: "Victor Adrian Martinez"
 date: "2023-04-25"
-output: html_document
-editor_options: 
-  markdown: 
+output:
+  html_document: default
+  pdf_document: default
+editor_options:
+  markdown:
     wrap: 72
 ---
 
-# Actividad: Monitoreo de log de servidor
+[link Github](https://github.com/ingvamartinez/Monitorizacion_Data_Mining)
+
+:   <https://github.com/ingvamartinez/Monitorizacion_Data_Mining>
+
+#Actividad: Monitoreo de log de servidor
 
 ## Actividad 1
 
